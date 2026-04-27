@@ -24,7 +24,10 @@ jobs:
       
       - name: Accept Android licenses
         run: yes | sdkmanager --licenses
-      
+
+      - name: Make Gradle executable
+        run: chmod +x gradlew
+
       - name: Build Debug APK
         run: ./gradlew assembleDebug --stacktrace
       
